@@ -16,3 +16,6 @@ while True:
     print("Connected to: ", addr)
 
     # Start a new thread after this to process signals
+    data = conn.recv(1024)
+    data = data.decode("utf-8")
+    print(data)
